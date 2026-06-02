@@ -879,6 +879,96 @@
       transform: translateY(0);
     }
 
+    /* ── 対応ジャンル別 運用実績（Works） ── */
+    #works {
+      background: var(--white);
+    }
+
+    .works-lead {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.9rem;
+      font-weight: 200;
+      color: var(--gray);
+      line-height: 2.3;
+      max-width: 680px;
+      margin-bottom: 52px;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .works-grid .work-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      max-width: calc(50% - 14px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .work-card {
+      background: var(--white);
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(140, 115, 85, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 44px rgba(140, 115, 85, 0.13);
+    }
+
+    .work-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .works-cta {
+      margin-top: 60px;
+      text-align: center;
+      padding: 52px 40px;
+      background: var(--beige);
+      border-radius: 4px;
+    }
+
+    .works-cta-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .works-cta-desc {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.85rem;
+      font-weight: 200;
+      color: var(--gray);
+      line-height: 2.2;
+      margin-bottom: 30px;
+    }
+
+    .works-cta-btn {
+      display: inline-block;
+      padding: 14px 42px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .works-cta-btn:hover {
+      background: var(--brown);
+      transform: translateY(-2px);
+    }
+
     /* ── レスポンシブ ── */
     @media (max-width: 900px) {
       nav { padding: 18px 24px; }
@@ -891,6 +981,11 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .results-grid { grid-template-columns: 1fr 1fr; }
       section { padding: 72px 24px; }
+      .works-grid { grid-template-columns: 1fr; }
+      .works-grid .work-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -1034,6 +1129,41 @@
         <div class="service-name">LINE・Web連携設計</div>
         <p class="service-desc">InstagramからLINEやホームページへの誘導設計。フォロワーを問い合わせ・購買につなげる仕組みをつくります。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 対応ジャンル別 運用実績 -->
+<section id="works">
+  <div class="section-inner">
+    <p class="section-label reveal">Works</p>
+    <h2 class="section-title reveal">対応ジャンル別<br><em>運用実績</em></h2>
+    <p class="works-lead reveal">
+      ブランドの世界観に合わせた投稿設計・導線づくり・分析改善により、保存・リーチ・フォロワー増加・購入導線の強化を支援しています。
+    </p>
+
+    <div class="works-grid">
+      <figure class="work-card reveal">
+        <img src="assets/images/results/interior.png" alt="インテリアブランドのSNS運用実績" loading="lazy">
+      </figure>
+      <figure class="work-card reveal">
+        <img src="assets/images/results/food.png" alt="食品メーカーのSNS運用実績" loading="lazy">
+      </figure>
+      <figure class="work-card reveal">
+        <img src="assets/images/results/lifestyle-goods.png" alt="生活雑貨メーカーのSNS運用実績" loading="lazy">
+      </figure>
+      <figure class="work-card reveal">
+        <img src="assets/images/results/drink.png" alt="飲料メーカーのSNS運用実績" loading="lazy">
+      </figure>
+      <figure class="work-card reveal">
+        <img src="assets/images/results/stationery.png" alt="文具メーカーのSNS運用実績" loading="lazy">
+      </figure>
+    </div>
+
+    <div class="works-cta reveal">
+      <p class="works-cta-heading">自社のSNSで何を改善できるか知りたい方へ</p>
+      <p class="works-cta-desc">まずは無料相談で、現在の投稿・導線・改善ポイントを整理します。</p>
+      <a href="#contact" class="works-cta-btn">無料相談する</a>
     </div>
   </div>
 </section>
