@@ -200,201 +200,149 @@
     }
 
     .hero-right {
-      position: relative;
       background: var(--beige-mid);
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 60px 36px;
     }
 
-    .hero-visual {
+    /* ── SNS成長イメージカード ── */
+    .sns-growth-visual {
       width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      max-width: 440px;
     }
 
-    /* 幾何学的な装飾 */
-    .hero-circle {
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      border: 1px solid var(--beige-dark);
-      position: absolute;
-    }
-
-    .hero-circle-2 {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      border: 1px solid var(--brown-light);
-      opacity: 0.4;
-      position: absolute;
-    }
-
-    .hero-center-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      font-weight: 300;
-      font-style: italic;
-      color: var(--brown);
-      opacity: 0.25;
-      letter-spacing: 0.05em;
-      position: absolute;
-      white-space: nowrap;
-    }
-
-    .hero-mock {
-      width: 220px;
+    .sns-growth-card {
       background: var(--white);
-      border-radius: 24px;
-      padding: 20px 16px;
+      border-radius: 16px;
+      padding: 28px 26px 20px;
       box-shadow: 0 20px 60px rgba(140,115,85,0.15);
-      position: relative;
-      z-index: 2;
     }
 
-    .mock-header {
+    .sns-growth-header {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
 
-    .mock-avatar {
-      width: 36px;
-      height: 36px;
+    .sns-avatar {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--beige-dark), var(--brown-light));
     }
 
-    .mock-name {
-      font-size: 0.72rem;
-      font-weight: 400;
-      color: var(--black);
+    .sns-account {
+      flex: 1;
+      min-width: 0;
     }
 
-    .mock-sub {
+    .sns-id {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--black);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .sns-subtitle {
       font-size: 0.62rem;
       color: var(--gray);
+      font-family: 'Noto Sans JP', sans-serif;
+      margin-top: 2px;
     }
 
-    .mock-img {
-      width: 100%;
-      height: 138px;
-      background: linear-gradient(160deg, var(--beige), var(--beige-dark));
-      border-radius: 8px;
-      margin-bottom: 12px;
+    .sns-concept-tag {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 4px;
+      background: var(--beige);
+      border: 1px solid var(--beige-dark);
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-size: 0.6rem;
+      color: var(--brown);
+      white-space: nowrap;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-    .mock-img-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
+    .tag-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+    }
+
+    .sns-divider {
+      height: 1px;
+      background: var(--beige-dark);
+      margin: 18px 0 16px;
+    }
+
+    .sns-metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 8px;
+    }
+
+    .sns-metric {
       text-align: center;
-      padding: 0 8px;
     }
 
-    .mock-img-text {
+    .metric-number {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
-      font-style: italic;
-      color: var(--brown);
-      opacity: 0.55;
-      line-height: 1;
-    }
-
-    .mock-img-label {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      color: var(--brown);
-      opacity: 0.8;
-    }
-
-    .mock-img-sub {
-      font-size: 0.5rem;
-      color: var(--gray);
-      letter-spacing: 0.06em;
-      line-height: 1.5;
-      opacity: 0.85;
-    }
-
-    .mock-stats {
-      display: flex;
-      gap: 8px;
-    }
-
-    .mock-stat {
-      text-align: center;
-      flex: 1;
-    }
-
-    .mock-stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
       font-weight: 600;
       color: var(--black);
+      line-height: 1;
+      margin-bottom: 5px;
       white-space: nowrap;
     }
 
-    .mock-stat-label {
-      font-size: 0.52rem;
+    .metric-label {
+      font-size: 0.56rem;
       color: var(--gray);
-      line-height: 1.4;
-      white-space: nowrap;
+      line-height: 1.5;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-    .mock-note {
-      font-size: 0.48rem;
+    .sns-note {
+      font-size: 0.5rem;
       color: var(--gray);
       opacity: 0.5;
       text-align: right;
-      margin-top: 7px;
+      margin-top: 14px;
       letter-spacing: 0.06em;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-    /* 浮かぶバッジ */
-    .hero-badge {
-      position: absolute;
-      bottom: 80px;
-      right: 60px;
+    .sns-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
       background: var(--white);
       border: 1px solid var(--beige-dark);
-      padding: 12px 18px;
-      border-radius: 100px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      z-index: 3;
-      animation: float 3s ease-in-out infinite;
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 0.68rem;
+      color: var(--gray);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      min-width: 7px;
       border-radius: 50%;
       background: #4CAF50;
+      animation: pulse 2.2s ease-in-out infinite;
     }
 
-    .badge-text {
-      font-size: 0.7rem;
-      color: var(--gray);
-      white-space: nowrap;
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
     }
 
     /* ── セクション共通 ── */
@@ -1014,7 +962,10 @@
       .nav-links { display: none; }
       #hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 120px 28px 60px; }
-      .hero-right { min-height: 320px; }
+      .hero-right { padding: 32px 20px 44px; }
+      .sns-metrics-row { grid-template-columns: repeat(4, 1fr); gap: 12px 6px; }
+      .metric-number { font-size: 1.1rem; }
+      .sns-concept-tag { display: none; }
       .about-grid,
       .services-grid,
       .pricing-grid { grid-template-columns: 1fr; }
@@ -1062,47 +1013,64 @@
   </div>
 
   <div class="hero-right">
-    <div class="hero-visual">
-      <div class="hero-circle"></div>
-      <div class="hero-circle-2"></div>
-      <div class="hero-center-text">Lumière</div>
+    <div class="sns-growth-visual fade-up delay-2">
 
-      <div class="hero-mock fade-up delay-2">
-        <div class="mock-header">
-          <div class="mock-avatar"></div>
-          <div>
-            <div class="mock-name">lumiere.social_sns</div>
-            <div class="mock-sub">ご依頼後の変化イメージ</div>
+      <div class="sns-growth-card">
+
+        <div class="sns-growth-header">
+          <div class="sns-avatar"></div>
+          <div class="sns-account">
+            <div class="sns-id">lumiere.social_sns</div>
+            <div class="sns-subtitle">ご依頼後の成長イメージ</div>
+          </div>
+          <div class="sns-concept-tag">
+            <span class="tag-icon">✦</span>
+            <span>世界観づくりと投稿改善</span>
           </div>
         </div>
-        <div class="mock-img">
-          <div class="mock-img-inner">
-            <span class="mock-img-text">✦</span>
-            <span class="mock-img-label">Growth Image</span>
-            <span class="mock-img-sub">SNS運用後の成長イメージ</span>
+
+        <div class="sns-divider"></div>
+
+        <div class="sns-metrics-row">
+          <div class="sns-metric">
+            <div class="metric-number">+1,240</div>
+            <div class="metric-label">フォロワー増加</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+48%</div>
+            <div class="metric-label">リーチ増加</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+4.8pt</div>
+            <div class="metric-label">エンゲージメント改善</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+210</div>
+            <div class="metric-label">保存数増加</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+320</div>
+            <div class="metric-label">プロフィール<br>アクセス増加</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+85</div>
+            <div class="metric-label">サイトクリック<br>増加</div>
+          </div>
+          <div class="sns-metric">
+            <div class="metric-number">+12件</div>
+            <div class="metric-label">お問い合わせ<br>増加</div>
           </div>
         </div>
-        <div class="mock-stats">
-          <div class="mock-stat">
-            <div class="mock-stat-num">+1,240</div>
-            <div class="mock-stat-label">フォロワー</div>
-          </div>
-          <div class="mock-stat">
-            <div class="mock-stat-num">+48%</div>
-            <div class="mock-stat-label">リーチ</div>
-          </div>
-          <div class="mock-stat">
-            <div class="mock-stat-num">+4.8pt</div>
-            <div class="mock-stat-label">エンゲージ</div>
-          </div>
-        </div>
-        <p class="mock-note">※ 運用イメージです</p>
+
+        <div class="sns-note">※運用イメージです</div>
+
       </div>
 
-      <div class="hero-badge">
-        <div class="badge-dot"></div>
-        <span class="badge-text">フォロワー増加中 📈</span>
+      <div class="sns-status-pill">
+        <span class="status-dot"></span>
+        <span>運用改善中</span>
       </div>
+
     </div>
   </div>
 </section>
