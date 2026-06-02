@@ -284,7 +284,7 @@
 
     .mock-img {
       width: 100%;
-      height: 180px;
+      height: 138px;
       background: linear-gradient(160deg, var(--beige), var(--beige-dark));
       border-radius: 8px;
       margin-bottom: 12px;
@@ -293,17 +293,44 @@
       justify-content: center;
     }
 
+    .mock-img-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      text-align: center;
+      padding: 0 8px;
+    }
+
     .mock-img-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-style: italic;
       color: var(--brown);
-      opacity: 0.6;
+      opacity: 0.55;
+      line-height: 1;
+    }
+
+    .mock-img-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--brown);
+      opacity: 0.8;
+    }
+
+    .mock-img-sub {
+      font-size: 0.5rem;
+      color: var(--gray);
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+      opacity: 0.85;
     }
 
     .mock-stats {
       display: flex;
-      gap: 12px;
+      gap: 8px;
     }
 
     .mock-stat {
@@ -313,14 +340,26 @@
 
     .mock-stat-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--black);
+      white-space: nowrap;
     }
 
     .mock-stat-label {
-      font-size: 0.6rem;
+      font-size: 0.52rem;
       color: var(--gray);
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .mock-note {
+      font-size: 0.48rem;
+      color: var(--gray);
+      opacity: 0.5;
+      text-align: right;
+      margin-top: 7px;
+      letter-spacing: 0.06em;
     }
 
     /* 浮かぶバッジ */
@@ -1032,27 +1071,32 @@
         <div class="mock-header">
           <div class="mock-avatar"></div>
           <div>
-            <div class="mock-name">lumiere_official</div>
-            <div class="mock-sub">フォロワー 1,240人</div>
+            <div class="mock-name">lumiere.social_sns</div>
+            <div class="mock-sub">ご依頼後の変化イメージ</div>
           </div>
         </div>
         <div class="mock-img">
-          <span class="mock-img-text">✦</span>
+          <div class="mock-img-inner">
+            <span class="mock-img-text">✦</span>
+            <span class="mock-img-label">Growth Image</span>
+            <span class="mock-img-sub">SNS運用後の成長イメージ</span>
+          </div>
         </div>
         <div class="mock-stats">
           <div class="mock-stat">
-            <div class="mock-stat-num">1,240</div>
+            <div class="mock-stat-num">+1,240</div>
             <div class="mock-stat-label">フォロワー</div>
           </div>
           <div class="mock-stat">
-            <div class="mock-stat-num">4.8%</div>
-            <div class="mock-stat-label">エンゲージ</div>
+            <div class="mock-stat-num">+48%</div>
+            <div class="mock-stat-label">リーチ</div>
           </div>
           <div class="mock-stat">
-            <div class="mock-stat-num">+120</div>
-            <div class="mock-stat-label">先月比</div>
+            <div class="mock-stat-num">+4.8pt</div>
+            <div class="mock-stat-label">エンゲージ</div>
           </div>
         </div>
+        <p class="mock-note">※ 運用イメージです</p>
       </div>
 
       <div class="hero-badge">
